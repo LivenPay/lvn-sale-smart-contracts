@@ -1,0 +1,27 @@
+{
+  "name": "liven",
+  "version": "1.0.0",
+  "description": "Liven ERC223 and Sale",
+  "main": "truffle.js",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "chai-bignumber": "^2.0.2",
+    "ethereumjs-abi": "^0.6.5",
+    "ganache-cli": "^6.1.8",
+    "openzeppelin-solidity": "^1.12.0",
+    "pify": "^4.0.0",
+    "solidity-coverage": "^0.5.11",
+    "tn-truffle-test-utils": "^1.0.4",
+    "truffle": "^4.1.14"
+  },
+  "scripts": {
+    "test": "truffle test",
+    "coverage": "./node_modules/.bin/solidity-coverage"
+  },
+  "author": "sebastian@flexdapps.com",
+  "license": "ISC"
+}
