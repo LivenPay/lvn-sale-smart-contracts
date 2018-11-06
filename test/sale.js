@@ -1,4 +1,4 @@
-const Sale = artifacts.require('Sale')
+const Sale = artifacts.require('./LivenSale.sol')
 const utils = require('tn-truffle-test-utils')
 
 const BigNumber = web3.BigNumber;

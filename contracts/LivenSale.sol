@@ -36,11 +36,15 @@ contract LivenSale is Ownable {
 
     constructor (address _proceedsAddress) public {
         proceedsAddress = _proceedsAddress;
-        endTimestamp = now + SIX_WEEKS_IN_SECONDS;
+        endTimestamp = block.timestamp + SIX_WEEKS_IN_SECONDS;
     }
 
     function () public payable {
-        require(!saleEnded && now < endTimestamp, "Campaign has ended. No more contributions possible.");
+        buyTokens();
+    }
+
+    function buyTokens () public payable {
+        require(!saleEnded && block.timestamp < endTimestamp, "Campaign has ended. No more contributions possible.");
         require(msg.value >= minimumContribution, "No contributions below 0.1 ETH.");
         require(weiContributed[msg.sender] < maximumContribution, "Contribution cap already reached.");
 
